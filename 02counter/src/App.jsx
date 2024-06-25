@@ -5,32 +5,41 @@ import './App.css'
 
 function App() {
 
-  let [counter, setCounter] = useState(10)
+  let [counter, setCounter] = useState(0);
 
-  //let count = 10;
+  // let counter = 12;
 
-  const addCount = () => {
-    // console.log("count:", count);
-    counter++;
-    setCounter(counter);
-
+  const addValue = () => {
+    document.querySelector('#msg').innerHTML = '';
+    if(counter == 20){
+      document.querySelector('#msg').innerHTML = 'Maximum limit reached'
+    }else{
+      setCounter(counter + 1);
+    }
+    
+    // console.log("count: ", counter);
   }
 
-  const removeCount = () => {
-    counter--;
-    setCounter(counter);
- 
+  const removeValue = () => {
+    document.querySelector('#msg').innerHTML = '';
+    if(counter == 0 ){
+      document.querySelector('#msg').innerHTML = 'Minimun limit reached'
+    }else{
+      setCounter(counter - 1);
+    }
+   
+    // console.log("count: ", counter);
   }
 
   return (
     <>
       <h1>Shrii and React</h1>
-      <h2 >Counter: <span id='showCount'>{counter}</span></h2>
-      <button onClick={addCount}>Add</button>
+      <h2>Counter: {counter}</h2>
+      <button onClick={addValue}>Add</button>
       <br />
       <br />
-      <button onClick={removeCount}>Remove</button>
-    
+      <button onClick={removeValue}>Remove</button>
+      <h3 id='msg'></h3>
     </>
   )
 }
