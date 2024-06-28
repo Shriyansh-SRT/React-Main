@@ -14,7 +14,16 @@ function App() {
     if(counter == 20){
       document.querySelector('#msg').innerHTML = 'Maximum limit reached'
     }else{
-      setCounter(counter + 1);
+      // setCounter(counter + 1);
+      // setCounter(counter + 1);
+      // setCounter(counter + 1);
+      // setCounter(counter + 1);
+      // setCounter(counter + 1);
+      setCounter( (prevCounter) => (prevCounter + 1));
+      setCounter( (prevCounter) => (prevCounter + 1));
+      setCounter( (prevCounter) => (prevCounter + 1));
+      setCounter( (prevCounter) => (prevCounter + 1));
+      setCounter( (prevCounter) => (prevCounter + 1));
     }
     
     // console.log("count: ", counter);
